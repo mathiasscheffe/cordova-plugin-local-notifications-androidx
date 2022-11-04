@@ -29,7 +29,7 @@ import android.app.NotificationManager;
 import android.content.Context;
 import android.content.SharedPreferences;
 import android.service.notification.StatusBarNotification;
-import android.support.v4.app.NotificationManagerCompat;
+import androidx.core.app.NotificationManagerCompat;
 
 import org.json.JSONException;
 import org.json.JSONObject;
@@ -38,12 +38,10 @@ import java.util.ArrayList;
 import java.util.List;
 import java.util.Set;
 
-import de.appplant.cordova.plugin.badge.BadgeImpl;
-
 import static android.os.Build.VERSION.SDK_INT;
 import static android.os.Build.VERSION_CODES.M;
 import static android.os.Build.VERSION_CODES.O;
-import static android.support.v4.app.NotificationManagerCompat.IMPORTANCE_DEFAULT;
+import static androidx.core.app.NotificationManagerCompat.IMPORTANCE_DEFAULT;
 import static de.appplant.cordova.plugin.notification.Notification.PREF_KEY_ID;
 import static de.appplant.cordova.plugin.notification.Notification.Type.TRIGGERED;
 
@@ -169,7 +167,6 @@ public final class Manager {
         }
 
         getNotCompMgr().cancelAll();
-        setBadge(0);
     }
 
     /**
@@ -198,7 +195,6 @@ public final class Manager {
         }
 
         getNotCompMgr().cancelAll();
-        setBadge(0);
     }
 
     /**
@@ -368,19 +364,6 @@ public final class Manager {
             return null;
 
         return new Notification(context, options);
-    }
-
-    /**
-     * Set the badge number of the app icon.
-     *
-     * @param badge The badge number.
-     */
-    public void setBadge (int badge) {
-        if (badge == 0) {
-            new BadgeImpl(context).clearBadge();
-        } else {
-            new BadgeImpl(context).setBadge(badge);
-        }
     }
 
     /**

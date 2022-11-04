@@ -8,11 +8,8 @@
 </p>
 
 <p align="center">
-    <a href="https://www.npmjs.com/package/cordova-plugin-local-notification">
-        <img src="https://badge.fury.io/js/cordova-plugin-local-notification.svg" alt="npm version" />
-    </a>
-    <a href="https://www.paypal.com/cgi-bin/webscr?cmd=_s-xclick&hosted_button_id=L3HKQCD9UA35A "Donate once-off to this project using Paypal"">
-        <img src="https://img.shields.io/badge/paypal-donate-yellow.svg" alt="PayPayl donate button" />
+    <a href="https://www.npmjs.com/package/cordova-plugin-local-notification-androidx">
+        <img src="https://badge.fury.io/js/cordova-plugin-local-notification-androidx.svg" alt="npm version" />
     </a>
     <a href="https://opensource.org/licenses/Apache-2.0">
         <img src="https://img.shields.io/badge/License-Apache%202.0-blue.svg" alt="License" />
@@ -21,7 +18,7 @@
 
 <br>
 
-> A notification is a message you display to the user outside of your app's normal UI. When you tell the system to issue a notification, it first appears as an icon in the notification area. To see the details of the notification, the user opens the notification drawer. Both the notification area and the notification drawer are system-controlled areas that the user can view at any time.
+> A notification is a message you display to the user outside of your app's normal UI. When you tell the system to issue a notification, it first appears as an icon in the notification area. To see the details of the notification, the user opens the notification drawer. Both the notification area and the notification drawer are system-controlled areas that the user can view at any time. This plugin is based on https://github.com/katzer/cordova-plugin-local-notifications but was modified to work with androidx support libraries and an up to date cordova-android plugin.
 
 <br>
 
@@ -55,7 +52,6 @@
 
 Please make sure that you always read the tagged README for the version you're using.
 
-See the _0.8_ branch if you cannot upgrade. Further development for `v0.9-beta` will happen here. The `0.9-dev` and `ios10` branches are obsolate and will be removed soon.
 
 __Known issues__
 
