@@ -38,8 +38,6 @@ import java.util.ArrayList;
 import java.util.List;
 import java.util.Set;
 
-import de.appplant.cordova.plugin.badge.BadgeImpl;
-
 import static android.os.Build.VERSION.SDK_INT;
 import static android.os.Build.VERSION_CODES.M;
 import static android.os.Build.VERSION_CODES.O;
@@ -169,7 +167,6 @@ public final class Manager {
         }
 
         getNotCompMgr().cancelAll();
-        setBadge(0);
     }
 
     /**
@@ -198,7 +195,6 @@ public final class Manager {
         }
 
         getNotCompMgr().cancelAll();
-        setBadge(0);
     }
 
     /**
@@ -368,19 +364,6 @@ public final class Manager {
             return null;
 
         return new Notification(context, options);
-    }
-
-    /**
-     * Set the badge number of the app icon.
-     *
-     * @param badge The badge number.
-     */
-    public void setBadge (int badge) {
-        if (badge == 0) {
-            new BadgeImpl(context).clearBadge();
-        } else {
-            new BadgeImpl(context).setBadge(badge);
-        }
     }
 
     /**
